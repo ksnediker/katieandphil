@@ -8,7 +8,6 @@ var	port = process.env.PORT || 3000;
 var	bodyParser = require('body-parser');
 var	app = express();
 var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/guestlist';
-mongoose.connect(mongoUri);
 
 // =============================
 // Middleware
@@ -32,7 +31,7 @@ var Guest = require('./models/guest')
 app.listen(port, function() {
 	console.log("app listening", port);
 });
-
+mongoose.connect(mongoUri);
 
 // =============================
 // Routes
