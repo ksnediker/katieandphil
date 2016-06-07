@@ -1,0 +1,283 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+	<title>Katie & Phil</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.4/js.cookie.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Lato|Handlee|Pontano+Sans' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/" href="images/wedding-icon.png">
+</head>
+<body>
+	<div id="index-container">
+		
+		<div id="header-container">
+			<div id="header">Katie & Phil
+			</div>
+		</div>
+
+		<div id="nav-container">
+			<ul id="navbar">
+				<li class="nav-list" id="home-link">Home</li>
+				<li class="nav-list" id="rsvp-link">RSVP</li>
+				<li class="nav-list" id="location-link">Location</li>
+				<li class="nav-list" id="accommodations-link">Accommodations</li>
+				<li class="nav-list" id="party-link">Wedding Party</li>
+				<li class="nav-list" id="contact-link">Contact Us</li>
+			</ul>
+		</div>
+		
+		<div class="container" id="home-container">
+			<div id="date-image" class="image-container">
+				<img src="images/header.png">
+			</div>
+
+			<div class="text-content" id="intro-container">
+				<p class="content" id="intro">Katie and Phil met all the way back in high school in the Buffalo area, and &ndash; despite cultural differences between Katie, the all&ndash;American (or Azerbaijani, depending on who you ask), and Phil, the full-blooded Greek, as well as distance (during college and the immediate years afterwards) &ndash; their relationship has only grown stronger over time, becoming a partnership that is underpinned by a deep and enduring love.</p><p class="content" id="intro">We view our wedding as a celebration of our partnership, rather than the beginning of it, and hope you can all be there with us on October 1st!</p>
+			</div>
+		</div>
+
+		<div class="break" id="rsvp-break">
+			<p class="break-text">RSVP</p>
+			<div class="open" id="rsvp-open">+</div>
+			<div class="close" id="rsvp-close">-</div>
+		</div>
+
+		<div class="container" id="rsvp-container" ng-controller="AppCtrl">
+			<div class="text-content">
+				<div class="content" id="rsvp-content">
+					<p> Please RSVP by submitting your invitee information below (including if you are not planning on attending - just select the "No" option). Make sure to submit invitees ONE AT A TIME - after submitting the first person, a button will appear allowing you to input more. The comments section can be used to inform us of any dietary restrictions or other pertinent information. </p><p class="content" id="rsvp-content">Also, please make sure to RSVP for any plus-ones (if you received a plus-one invitation) who are attending to ensure they receive a seat.</p>
+				</div>
+			</div>
+			<table id="rsvp-one" class="rsvp">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+						<th class="attending">Attending</th>
+						<th class="attending"></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input class="input" type="text" placeholder="First name" ng-model="guest.firstname"></td>
+						<td><input class="input" type="text" placeholder="Last name" ng-model="guest.lastname"></td>
+						<td><input type="radio" name="attend" ng-model="guest.attend" value="true">Yes</td>
+						<td><input type="radio" name="attend" ng-model="guest.notattend" value="true">No</td>
+						<td><input class="input" type="text" placeholder="Comments" ng-model="guest.comment"></td>
+						<td><button id="submit" ng-click="addGuest()">Submit</button></td>
+						<td><p id="submitted">Submitted!</p></td>
+						<td><button id="addanother" ng-click="deselect()">RSVP for another guest</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="text-content">
+				<div class="content" id="rsvp-content">
+					<p>If you would prefer to RSVP via email, please send the full names of all the guests you're responding for (whether or not they are attending) and any addtional information you'd like to share to kmsnediker@gmail.com. If necessary, you can also call Phil (716-536-2247) or Katie (716-880-5867) directly to RSVP. If you need to change any information that you have already submitted, please email or call Phil or Katie to do so.</p>
+				</div>
+				<div class="content" id="rsvp-content">
+					<h2 class="name">Gifts</h2>
+					<p>We feel so grateful to be able to spend our wedding day with all of our friends and family; your presence is truly all the presents we need. Because we live in a tiny New York City apartment and have all the household items we can fit, if you'd like to get us a gift to celebrate, we'd prefer a monetary gift that we can put towards a downpayment on a future home.<br><br>However, we have set up a small registry on <a href="https://www.amazon.com/wedding/katherine-snediker-philip-constantinou-staatsburg-october-2016/registry/2AKWG6ULEAYFB" target="_blank">Amazon</a> with a few items we could use.<br><br>Thank you,<br>Katie and Phil
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<p class="top" id="rsvp-top">Back to top</p>
+			</div>
+		</div>
+
+		<div class="break" id="location-break">
+			<p class="break-text">Location and Activities</p>
+			<div class="open" id="location-open">+</div>
+			<div class="close" id="location-close">-</div>
+		</div>
+
+		<div class="container" id="location-container">
+			<div class="map" id="loh-map-canvas">
+			</div>
+			
+			<div class="text-content" id="address-container">
+				<h2 class="name" id="locust-name">Locusts on Hudson</h2>
+				<p class="info" id="locust-content">135 Old Post Road<br>Staatsburg, NY 12580<br><a href="http://www.locustsonhudson.com/index.php" target="_blank">Website</a></p>
+				<p class="content">Our wedding and reception will be held at Locusts on Hudson, an estate on the Hudson River in Staatsburg, New York. The closest train station is in Rhinecliff. Amtrak offers a 100-minute service from Penn Station to Rhinecliff-Kingston (which is a 15 minute drive to Locusts on Hudson), while Metro North offers a 115-minute service from Grand Central to Poughkeepsie (which is a 20 minute drive from the house). 
+				</p>
+				<h2 class="name">Schedule of Events</h2>
+					<ul class="intro-list"> 
+						<li>4:00 pm - Our (brief) ceremony will be held at 4:00 pm, in an outdoor area adjacent to the main house</li>
+						<li>4:30 pm - Cocktails will be served at the pool (directly behind the main house)</li>
+						<li>6:30 pm - Dinner will be served in the main hall of the the property's barn (a short walk from the main house)</li>
+						<li> 8:00 pm - Drinks and dancing will follow dinner in the back area of the barn</li>
+						<li>11:00 pm - Guests who would like to continue to celebrate are welcome to walk back to the pool area behind the main house for the after-party</li>
+					</ul>
+				<p class="content">Shuttle buses will be running throughout the evening to and from the property and the four hotels (in Kingston and Poughkeepsie) at which we've reserved rooms. There will also be limited parking on-site.</p> 
+			</div>
+
+			<div class="text-content">
+				<div class="content">
+					<h3>Nearby Restaurants</h3>
+					<ul class="intro-list">
+						<li>Matchbox Caf&eacute;</li>
+						<li>Armadillo Bar and Grill</li>
+						<li>Savona's Trattoria</li>
+						<li>Smoky Rock Barbaque</li>
+						<li>Sissy's Cafe</li>
+						<li>Diego's Taqueria</li>
+						<li>Stockade Tavern</li>
+					</ul>
+					<h3>Nearby Activities</h3>
+					<ul class="intro-list">
+						<li>Kayaking</li>
+						<li>Hiking</li>
+						<li>Golf</li>
+						<li>Old Rhinebeck Aerodrome</li>
+						<li>Hudson Valley Food Tours</li>
+						<li>Maritime Museum</li>
+						<li>Botanical Gardens</li>
+					</ul>
+				</div>
+			</div>
+
+			<div>
+				<p class="top" id="rsvp-top">Back to top</p>
+			</div>
+
+		</div>
+
+		<div class="break" id="accommodations-break">
+			<p class="break-text">Accommodations</p>
+			<div class="open" id="accommodations-open">+</div>
+			<div class="close" id="accommodations-close">-</div>			
+		</div>
+
+		<div class="container" id="accommodations-container">
+			
+			<div class="map" id="hotel-map-canvas">
+			</div>
+
+			<div class="text-content" id="hotel-info">
+				<div class="content">
+					<p id="rooms">We have rooms blocked for guests to book at the four hotels listed below. If you are calling to reserve a room, please reference the Snediker-Constantinou wedding.
+					</p>
+				</div>
+				<div class="hotel-div" id="hotel-div1">
+					<h2 class="name" id="pcourtyard">Poughkeepsie Courtyard</h2>
+					<p class="info" id="pcourtyard-content">2641 South Road<br>Poughkeepsie, NY 12601<br>845.485.6336<br><br>Price per night: $199 to $299<br><a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Snediker/Constantinou%20Wedding%20Room%20Block%5EPOUCH%60scwscwa%7Cscwscwb%60199.00-229.00%60USD%60false%605%609/30/16%6010/2/16%609/9/16&app=resvlink&stop_mobi=yes" target="_blank">Book online</a></p>
+					<br>
+					<h2 class="name" id="rpough">Residence Inn Poughkeepsie</h2>
+					<p class="info" id="rpough-content">2525 South Road<br>Poughkeepsie, NY 12601<br>845.463.4343<br><br>Price per night: $229<br><a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Snediker%20Constantinou%20Wedding%5Epouri%60scwscwa%60229.00%60USD%60false%603%609/30/16%6010/2/16%609/9/16&app=resvlink&stop_mobi=yes" target="_blank">Book online</a></p>
+				</div>
+
+				<div class="hotel-div" id="hotel-div2">
+					<h2 class="name" id="hkingston">Hampton Inn Kingston</h2>
+					<p class="info" id="hkingston-content">1307 Ulster Avenue<br>Kingston, NY 12401<br>845.382.2600<br><br>Price per night: $229<br><a href="http://hamptoninn3.hilton.com/en/hotels/new-york/hampton-inn-kingston-POUKGHX/index.html" target="_blank">Book online</a> (Enter group code SCW)</p>
+					<br>
+					<h2 class="name" id="kcourtyard">Kingston Courtyard</h2>
+					<p class="info" id="kcourtyard-content">500 Frank Sottile Blvd.<br>Kingston, NY 12401<br>845.382.2300<br><br>Price per night: $209<br>Call to book</a></p>
+				</div>
+				<div class="content">
+					<h3>Additional hotels in the area include:</h3>
+						<ul>
+							<li>Beekman Arms and Delamater Inn, 24 West Market Street, Rhinebeck, NY (10 minute drive to Locusts on Hudson)</li>
+							<li>The Rhinecliff Hotel, 4 Grinnell Street, Rhinecliff, NY 12574 (15 minute drive to Locusts on Hudson)</li>
+							<li>Rhinebeck Inn, 340 Wurtemburg Road, Rhinebec, NY 12572 (12 minute drive to Locusts on Hudson)</li>
+							<li>Old Stone Farm, 2434 State Route 9G, Staatsburg, NY 12580 (12 minute drive to Locusts on Hudson) </li>
+						</ul>
+				</div>
+			</div>
+			<div>
+				<p class="top" id="rsvp-top">Back to top</p>
+			</div>
+		</div>
+
+		<div class="break" id="party-break">
+			<p class="break-text">Wedding Party</p>
+			<div class="open" id="party-open">+</div>
+			<div class="close" id="party-close">-</div>			
+		</div>
+
+		<div class="container" id="party-container">
+
+			<div id="bridesmaids-image" class="image-container">
+				<img src="images/bridesmaids.png">
+			</div>
+
+			<div class="text-content" id="bridesmaids-container">
+				<div class="content" id="bridesmaids">
+					<h3 class="party">Melissa Streckewald</h3>
+					<p class="content">Melissa is Katie's older sister. She was lucky enough to spend the first 12 years of her life as an only child, until Katie arrived and a devastating war of attrition began. Some of Melissa's favorite things to do to her little sister included nuggies, fish-hooks and wet willies. Katie finally got fed up one day and chased Melissa into her room with a knife (a butter knife, to be clear - nothing to worry about here). Melissa is the mother of three of Katie's four nieces: Emily, Isabella and Violette.</p>
+					<h3 class="party">Angie Snediker</h3>
+					<p class="content">Angie is Katie's younger sister by just 19 months, so they grew up very close. Taking to heart many of her older sister's lessons, Katie could be quite the bully when they were little - frequently using her much greater body mass to her advantage. Angie's main tools of retaliation were her teeth and fingernails; one time the family doctor diagnosed Katie with "cat-scratch fever" after seeing claw marks on her wrists (said doctor's possession of a medical degree is questionable). In high school, their relationship became much more about sports, as they were teammates on both the field hockey and swim teams. Angie is mother of Katie's youngest niece, Sage.</p> 
+					<h3 class="party">Katie Luthringer</h3>
+					<p class="content">Katie (along with Lauren and Julie) better knows the bride as "Biza," a name thrust upon Katie (Snediker) by her new co-workers on her first day of work at an apothecary store back in high school. Katie (Luthringer) has been a constant source of joy and entertainment since their friendship began nearly 10 years ago. Biza, Katie, Lauren and Julie have existed in a shared state of near-constant stream of consciousness (via group text) for the past few years, effectively voiding the nuisances of distance and the demands of social relationships in their immediate vicinity. Katie can always be relied upon to cheer you up when we're feeling down, and she has served as the de facto group psychologist, making sure members of the group survive their frequent life-or-death situations. She also famously came up with one of their many made-up words, including "bonz" (which means belly; e.g., "I shouldn't have eaten that entire chicken finger pizza, my bonz hurts and I need to sit here with my pants undone").</p>
+					<h3 class="party">Julie Maggio</h3> 
+					<p class="content">Julie (another fellow apothecary employee) is perhaps Biza's more interesting friend. Julie is an unambiguous over-sharer, and her entertainment value in that capacity is irreplacable. While we wish we could share an example or two, there honestly isn't a single story about her that can be shared on this website / put into print. You can, however, check out her Snapchat if you're interested in learning more about her - she is a highly dedicated snapper. In addition to her snapping skills, Julie is also an extremely talented make-up artist and hair-stylist, and will be working wonders for the wedding.</p>
+					<h3 class="party">Lauren Rivett</h3> 
+					<p class="content">Lauren (the fourth wheel of the apothecary team) is perhaps the most refined member of the group. She is frequently (and understandably) repulsed by the content shared in the group-text. But don't think she is terribly timid - she out-party's all of us when push comes to shove. Lauren and Biza developed a close connection while working at the apothecary, as both were Political Science majors at the University at Buffalo. While Biza managed to earn a C+ in a 101 class, Lauren was perpetually stressed by the prospect of finishing with a 3.9 rather than a 4.0 each semester. All her hard work has paid off, as Lauren is now Cheif of Staff for a NY State Senator!</p> 
+				</div>
+			</div>
+
+			<div id="groomsmen-image" class="image-container">
+				<img src="images/groomsmen.png">
+			</div>
+
+			<div class="text-content" id="groomsmen-container">
+				<div class="content" id="groomsmen">
+					<h3 class="party">Wossen Ayele</h3>
+					<p class="content">Wossen is the best man and long-time bromantic interest of the groom, from the moment they began sharing their freshman dorm at Yale. What began as a bond over common backgrounds (first generation Americans) and interests (sports, Chappelle&#39;s show, NFL Street), quickly blossomed when Woss began playing rugby and the groom began to routinely rest his head snugly against Woss&#39;s thigh/butt area (typical stuff for locks and #8s, nothing out of the ordinary here). Countless shared scrums, rucks and tackles later, Phil struggles to think of someone he'd prefer to take the field with again (not that it requires much encouragement). In the middle of the night, the bride oftentimes awakens to find the groom restlessly tossing and turning to find the perfect pillow position, all the while mumbling Woss&#39;s name and their old scrum cadence.</p>
+					<h3 class="party">Will Alexander</h3>
+					<p class="content">Phil and Will had a late-blooming friendship in college, with the only discernible inflection point in the relationship appearing to come via the institution of the now legendary Meaty Friday&#39;s, which had a solid two-year run as a way of life for a small group of students at Yale. Meaty Friday&#39;s quickly transitioned into table&ndash;breaking Saturdays, and then there was no looking back. Whether capturing seagoing vessels in the Cayman Islands, sharing bunk beds in the All Star Suite, disregarding height restrictions while driving U-Hauls into parking garages, or repeatedly failing to kick a rugby ball more than 10 meters down the field, these two have remained close ever since.</p>
+					<h3 class="party">Rob Morse</h3> 
+					<p class="content">Rob is perhaps the unlikeliest groomsman, given the groom&#39;s instinctive distaste for backs and scrum&ndash;halves in particular. Early interactions included a (justified) dump tackle during a &quot;friendly&quot; game of touch, and being told to &quot;put the damn ball in the scrum and stop talking about back plays.&quot; However, Rob used his persistent and unwavering goodness, devotion to the club, and gutsy rugby performances through injury to break through the groom&#39;s hard outer shell and become a close friend, confidant and future All Star Capital partner. Has a standing bet with Phil regarding whose child will score more tries for Yale Rugby, a wager the groom is surely to lose given his inferior athletic qualities (his preferred method of play is viewed in some circles as less &quot;refined&quot; or &quot;skilled&quot;), although we're confident that Katie's natural abilities will be enough to offset this. </p>
+					<h3 class="party">Alex Constantinou</h3> 
+					<p class="content">Alex is the older brother of the groom and an all-around solid guy. During their childhood, he oftentimes dealt with the groom pointing the accusatory finger at him for things the groom very obviously had done (their all&ndash;knowing parents saw right through it). Mercifully, he has not held a grudge, or at least is patiently biding his time for revenge. A little known fun fact is that Alex used to frustratedly complain to his parents that the groom was too sensitive, as he repeatedly and openly cried during viewings of movies including Braveheart, The Last Samurai, Gladiator…and even Old School, somehow). Thankfully, the groom has learned how to conceal his emotions beneath a hard facade, while quietly weeping on the inside.</p> 
+					<h3 class="party">Nick Constantinou</h3>
+					<p class="content">Nick is the younger brother and long-time mini-me of the groom (ask to see pictures of them growing up, they were indistinguishable). While inseparable from the groom during their childhood, Nick's growing interest and talent in music (which is the polar opposite of the musically-handicapped groom) has correlated with increasingly frequent accusations hurled at the groom of being &quot;such a square&quot; or &quot;so establishment, man.&quot; Nick has been photographed with Motley Crue and clearly holds the advantage on the &quot;cool&quot; scale. He's probably voting for Bernie Sanders (just a guess, but pretty sure I'm right), and a likely candidate to wear a sweet t&ndash;shirt tuxedo to the wedding.</p> 
+				</div>
+			</div>
+
+			<div>
+				<p class="top" id="rsvp-top">Back to top</p>
+			</div>
+
+		</div>
+
+		<div class="break" id="contact-break">
+			<p class="break-text">Contact Us</p>
+			<div class="open" id="contact-open">+</div>
+			<div class="close" id="contact-close">-</div>			
+		</div>
+
+		<div class="container" id="contact-container">
+			<div id="contact">
+				<h2 class="name">Katie Snediker</h2>
+				<p class="info">
+					184 Joralemon Street, 3A<br>Brooklyn, NY 11201<br>Phone: 716-880-5867<br>Email: kmsnediker@gmail.com
+				</p>
+				<br>
+				<h2 class="name">Phil Constantinou</h2>
+				<p class="info">
+					184 Joralemon Street, 3A<br>Brooklyn, NY 11201<br>Phone: 716-536-2247<br>Email: philip.constantinou6@gmail.com
+				</p>
+
+			<div>
+				<p class="top" id="rsvp-top">Back to top</p>
+			</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="footer-container">
+		<p id="footer-one">Website developed and designed by</p>
+		<br>
+		<p id="footer-two">&copy; 2016 Katie Snediker</p>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAgnhYmZDvWvyF7mzzletNXzQMLn0SyK3I"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>

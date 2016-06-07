@@ -1,0 +1,275 @@
+ody {
+	display: inline-block;
+	background-color: #EBDCCB;
+	text-align: center;
+}
+
+.party {
+	font-family: 'Pontano Sans', sans-serif;
+  color: #91818A;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+  text-align: center;
+}
+
+#index-container {
+	width: 90%;
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+#header-container {
+	width: 90%;
+	height: 110px;
+	margin-top: 40px;
+	display: inline-block;
+	text-align: center;
+}
+
+#header {
+	width: 90%;
+	font-family: 'Handlee', cursive;
+	color: #91818A;
+	font-size: 72px;
+	padding-top: 10px;
+	display: inline-block;
+	text-align: left;
+	margin: auto;
+}
+
+#nav-container {
+	width: 80%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	display: inline-block;
+}
+
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding: 8px;
+  border-bottom: solid 3px;
+  border-color: #C3BAAA;
+  cursor: pointer;
+}
+
+.nav-list {
+	font-family: 'Pontano Sans', sans-serif;
+  color: #B2A3B5;
+  font-size: 20px;
+  display: inline;
+  margin: 20px;
+}
+
+ .image-container {
+ 	width: 80%;
+ 	display: inline-block;
+ }
+
+.content {
+	text-align: left;
+	font-family: 'Pontano Sans', sans-serif;f;
+	font-size: 18px;
+  color: #91818A;
+  padding: 5px;
+}
+
+.intro-list {
+	text-align: left;
+	font-family: 'Pontano Sans', sans-serif;f;
+	font-size: 18px;
+  color: #91818A;
+}
+
+.break {
+	width: 90%;
+	height: 45px;
+	background-color: white;
+	display: inline-block;
+	padding-top: 13px;
+	border-top: solid 4px;
+	border-color: #C3BAAA;
+}
+
+.break-text {
+	display: inline-block;
+	color: #B2A3B5;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 24px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	margin-left: 60px;
+}
+
+.container {
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	background-color: #F9F6ED;	
+}
+
+#intro {
+	text-align: center;
+}
+
+#loh-map-canvas {
+	display: inline-block;
+ 	height: 350px;
+ 	width: 60%;
+ }
+
+ #hotel-map-canvas {
+	display: inline-block;
+ 	height: 350px;
+ 	width: 60%;
+ }
+
+.text-content {
+  width: 90%;
+  height: auto;
+  display: inline-block;
+}
+
+.name {
+	color: #91818A;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 22px;
+	margin-bottom: 0px;
+	text-decoration: underline;
+}
+
+.info {
+	color: #91818A;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hotel-div {
+	display: inline-block;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.open {
+	float: right;
+	margin-right: 50px;
+	font-size: 30px;
+	cursor: pointer;
+	color: #B2A3B5;
+}
+
+.close {
+	float: right;
+	margin-right: 50px;
+	font-size: 30px;
+	cursor: pointer;
+	color: #B2A3B5;
+}
+
+.top {
+	float: left;
+	color: #B2A3B5;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 18px;
+	text-decoration: underline;
+	margin-bottom: 0px;
+}
+
+#footer-container {
+	display: inline-block;
+	text-align: center;
+	border: solid; 
+	border-color: white;
+	border-radius: 3px;
+}
+
+#footer-one {
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	margin: 0px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#footer-two {
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	margin: 0px;
+	margin-bottom: 10px;	
+}
+
+.rsvp {
+	color: #91818A;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 16px;
+	width: 90%;
+  display: inline-block;
+}
+
+.input {
+	font-size: 16px;
+	height: 50px;
+	width: 200px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#attending {
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+button {
+	background-color: #91818A;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Pontano Sans', sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+    background-color: white; 
+    color: #91818A;
+}
+
+#submitted {
+	margin-right: 15px;
+}
+
+.attending {
+	font-size: 18px;
+	text-align: center;
+	margin-left: 10px;
+}
+
+table {
+	table-layout: fixed; width: 100%;
+}
+
+#rooms {
+	text-align: center;
+}
