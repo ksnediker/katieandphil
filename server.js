@@ -39,8 +39,6 @@ app.listen(port, function() {
 // =============================
 
 app.get('/guestlist', function (req, res) {
-	console.log("Received get request");
-
 	Guest.find(function (err, docs) {
 		console.log(docs);
 		res.json(docs);
@@ -56,7 +54,6 @@ app.post('/guestlist', function (req, res) {
 		comment: req.body.comment
 	});
 	
-	console.log(req.body);
 	guest.save(req.body, function(err, doc) {
 		res.json(doc);
 	});

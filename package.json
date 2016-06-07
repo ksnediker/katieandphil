@@ -1,0 +1,31 @@
+{
+  "name": "katieandphil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "foreman": "^1.4.1",
+    "mongoose": "^4.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksnediker/katieandphil.git"
+  },
+  "engines": {
+    "node": "4.4.5",
+    "npm": "2.15.5"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksnediker/katieandphil/issues"
+  },
+  "homepage": "https://github.com/ksnediker/katieandphil#readme"
+}
