@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var	port = process.env.PORT || 3000;
 var	bodyParser = require('body-parser');
 var	app = express();
-var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/guestlist';
+var mongoUri = process.env.MONGODB_URI || 'mongodb://localhost/guestlist';
 
 // =============================
 // Middleware
