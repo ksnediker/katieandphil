@@ -48,7 +48,7 @@
 		<div class="container" id="rsvp-container" ng-controller="AppCtrl">
 			<div class="text-content">
 				<div class="content" id="rsvp-content">
-					<p> Please RSVP by submitting your invitee information below (including if you are not planning on attending - just select the "No" option). Make sure to submit invitees ONE AT A TIME - after submitting the first person, a button will appear allowing you to input more. The comments section can be used to inform us of any dietary restrictions or other pertinent information. </p><p class="content" id="rsvp-content">Also, please make sure to RSVP for any plus-ones (if you received a plus-one invitation) who are attending to ensure they receive a seat.</p>
+					<p> Please RSVP by submitting your invitee information below, including if you are not planning on attending - just select the "No" option. Make sure to submit invitees ONE AT A TIME - after submitting the first person, a button will appear allowing you to input more. The comments section can be used to inform us of any dietary restrictions or other pertinent information. </p><p class="content" id="rsvp-content">Also, please make sure to RSVP for any plus-ones (if you received a plus-one invitation) who are attending to ensure they receive a seat.</p>
 				</div>
 			</div>
 			<table id="rsvp-one" class="rsvp">
@@ -58,7 +58,6 @@
 						<th></th>
 						<th class="attending">Attending</th>
 						<th class="attending"></th>
-						<th></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -70,8 +69,10 @@
 						<td><input type="radio" name="attend" ng-model="guest.notattend" value="true">No</td>
 						<td><input class="input" type="text" placeholder="Comments" ng-model="guest.comment"></td>
 						<td><button id="submit" ng-click="addGuest()">Submit</button></td>
-						<td><p id="submitted">Submitted!</p></td>
-						<td><button id="addanother" ng-click="deselect()">RSVP for another guest</button></td>
+			<div class="text-content">
+				<p id="submitted">Submitted!</p>
+				<button id="addanother" ng-click="deselect()">RSVP for another guest</button>
+			</div>
 					</tr>
 				</tbody>
 			</table>
@@ -80,8 +81,13 @@
 					<p>If you would prefer to RSVP via email, please send the full names of all the guests you're responding for (whether or not they are attending) and any addtional information you'd like to share to kmsnediker@gmail.com. If necessary, you can also call Phil (716-536-2247) or Katie (716-880-5867) directly to RSVP. If you need to change any information that you have already submitted, please email or call Phil or Katie to do so.</p>
 				</div>
 				<div class="content" id="rsvp-content">
+					<h2 class="name">Attire</h2>
+					<p>Guests of the wedding are asked to wear "dressy casual" attire. For women this means a dress, skirt and nice top, pants outfit or jumpsuit. For men this mean a dress shirt or button down shirt, sports coat or blazer and khakis, slacks or dress pants. Ties are optional. Please no denim, t-shirts, sneakers or leisure wear.
+					</p>
+				</div>
+				<div class="content" id="rsvp-content">
 					<h2 class="name">Gifts</h2>
-					<p>We are thankful to have the opportunity to spend our wedding day with so many close friends and family – your time and presence are gifts in themselves. For those who would also like to offer a wedding present, please consider that as we live in a small New York City apartment, it would be most helpful to provide a monetary gift. Your gift would go towards helping us with the down payment for our future home. We do, however, also have a small registry available on <a href="https://www.amazon.com/wedding/katherine-snediker-philip-constantinou-staatsburg-october-2016/registry/2AKWG6ULEAYFB" target="_blank">Amazon</a> with a few items we could use.<br><br>Thank you,<br>Katie and Phil
+					<p>We are thankful to have the opportunity to spend our wedding day with so many close friends and family &mdash; your time and presence are gifts in themselves. For those who would also like to offer a wedding present, please consider that as we live in a small New York City apartment, it would be most helpful to provide a monetary gift. Your gift would go towards helping us with the down payment for our future home. We do, however, also have a small registry available on <a href="https://www.amazon.com/wedding/katherine-snediker-philip-constantinou-staatsburg-october-2016/registry/2AKWG6ULEAYFB" target="_blank">Amazon</a> with a few items we could use.<br><br>Thank you,<br>Katie and Phil
 					</p>
 				</div>
 			</div>
@@ -209,15 +215,15 @@
 			<div class="text-content" id="bridesmaids-container">
 				<div class="content" id="bridesmaids">
 					<h3 class="party">Melissa Streckewald</h3>
-					<p class="content">Melissa is Katie's older sister. She was lucky enough to spend the first 12 years of her life as an only child, until Katie arrived and a devastating war of attrition began. Some of Melissa's favorite things to do to her little sister included nuggies, fish-hooks and wet willies. Katie finally got fed up one day and chased Melissa into her room with a knife (a butter knife, to be clear - nothing to worry about here). Melissa is the mother of three of Katie's four nieces: Emily, Isabella and Violette.</p>
+					<p class="content">Melissa is Katie's older sister. She was lucky enough to spend the first 12 years of her life as an only child, until Katie arrived... Some of Melissa's favorite things to do to her little sister included nuggies, fish-hooks and wet willies. Katie finally got fed up one day and chased Melissa into her room with a knife (a butter knife, to be clear). They eventually reached a truce and their relationship went on to be much more sisterly. Katie was even the Maid of Honor in Melissa's wedding. Melissa is the mother of three of Katie's four nieces: Emily, Isabella and Violette.</p>
 					<h3 class="party">Angie Snediker</h3>
-					<p class="content">Angie is Katie's younger sister by just 19 months, so they grew up very close. Taking to heart many of her older sister's lessons, Katie could be quite the bully when they were little - frequently using her much greater body mass to her advantage. Angie's main tools of retaliation were her teeth and fingernails; one time the family doctor diagnosed Katie with "cat-scratch fever" after seeing claw marks on her wrists (said doctor's possession of a medical degree is questionable). In high school, their relationship became much more about sports, as they were teammates on both the field hockey and swim teams. Angie is mother of Katie's youngest niece, Sage.</p> 
+					<p class="content">Angie is Katie's younger sister by just 19 months, so they grew up very close. Taking to heart many of her older sister's lessons, Katie could be quite the bully when they were little - frequently using her much greater body mass to her advantage. Angie's main tools of retaliation were her teeth and fingernails; one time the family doctor diagnosed Katie with "cat-scratch fever" after seeing claw marks on her wrists. In high school, their relationship became much more about sports, as they were teammates on both the field hockey and swim teams. Now, in their older age they've taken up golf. Angie is mother of Katie's youngest niece, Sage.</p> 
 					<h3 class="party">Katie Luthringer</h3>
-					<p class="content">Katie (along with Lauren and Julie) better knows the bride as "Biza," a name thrust upon Katie (Snediker) by her new co-workers on her first day of work at an apothecary store back in high school. Katie (Luthringer) has been a constant source of joy and entertainment since their friendship began nearly 10 years ago. Biza, Katie, Lauren and Julie have existed in a shared state of near-constant stream of consciousness (via group text) for the past few years, effectively voiding the nuisances of distance and the demands of social relationships in their immediate vicinity. Katie can always be relied upon to cheer you up when we're feeling down, and she has served as the de facto group psychologist, making sure members of the group survive their frequent life-or-death situations. She also famously came up with one of their many made-up words, including "bonz" (which means belly; e.g., "I shouldn't have eaten that entire chicken finger pizza, my bonz hurts and I need to sit here with my pants undone").</p>
+					<p class="content">Katie (along with Lauren and Julie) better knows the bride as "Biza," a name thrust upon Katie (Snediker) by her new co-workers on her first day of work at with them at Tony Walker Apothecary back in 2007. Katie (Luthringer) has been a constant source of joy and entertainment since their friendship began nearly 10 years ago. Biza, Katie, Lauren and Julie have existed in a shared state of near-constant stream of consciousness via group text for the past few years, effectively voiding the nuisances of distance and the demands of social relationships in their immediate vicinity. Katie can always be relied upon to cheer you up when you're feeling down, and she has served as the de facto group psychologist, making sure members of the group survive their frequent life-or-death situations. She also famously came up with one of their many made-up words, including "bonz", which means belly; e.g., "I shouldn't have eaten that entire chicken finger pizza, my bonz hurts and I need to sit here with my pants undone". Katie now lives in Boulder, Colorado and generously offers to let Biza take up residence on her couch whenever she needs to get out of the city for awhile, which is often.</p>
 					<h3 class="party">Julie Maggio</h3> 
-					<p class="content">Julie (another fellow apothecary employee) is perhaps Biza's more interesting friend. Julie is an unambiguous over-sharer, and her entertainment value in that capacity is irreplacable. While we wish we could share an example or two, there honestly isn't a single story about her that can be shared on this website / put into print. You can, however, check out her Snapchat if you're interested in learning more about her - she is a highly dedicated snapper. In addition to her snapping skills, Julie is also an extremely talented make-up artist and hair-stylist, and will be working wonders for the wedding.</p>
+					<p class="content">Julie (another fellow apothecary employee) is perhaps Biza's most entertaining friend. Julie is an unabashed open book, something that Biza finds highly valuable in a friend. Julie and the rest of the group have many interesting stories they could share, but this website isn't the place for them. You can, however, check out her Snapchat if you're interested in learning more about her - she is a highly dedicated snapper. In addition to her social media skills, Julie is also an extremely talented make-up artist and hair-stylist, and will be working wonders for the wedding.</p>
 					<h3 class="party">Lauren Rivett</h3> 
-					<p class="content">Lauren (the fourth wheel of the apothecary team) is perhaps the most refined member of the group. She is frequently (and understandably) repulsed by the content shared in the group-text. But don't think she is terribly timid - she out-party's all of us when push comes to shove. Lauren and Biza developed a close connection while working at the apothecary, as both were Political Science majors at the University at Buffalo. While Biza managed to earn a C+ in a 101 class, Lauren was perpetually stressed by the prospect of finishing with a 3.9 rather than a 4.0 each semester. All her hard work has paid off, as Lauren is now Cheif of Staff for a NY State Senator!</p> 
+					<p class="content">Lauren is perhaps the most refined member of the group. She is frequently (and understandably) repelled by the content shared in the group-text. But don't think she is terribly timid - she can out-party all of them when push comes to shove. Lauren and Biza developed a close connection while working at the apothecary, as both were Political Science majors at the University at Buffalo. While Biza managed to once earn a C+ in a 101 class, Lauren was perpetually stressed by the prospect of finishing with a 3.9 rather than a 4.0 each semester. All her hard work has paid off, as Lauren is now Chief of Staff for a NY State Senator.</p> 
 				</div>
 			</div>
 

@@ -252,6 +252,10 @@ button:hover {
 
 #submitted {
 	margin-right: 15px;
+	text-align: center;
+	color: #91818A;
+	font-family: 'Pontano Sans', sans-serif;
+	font-size: 36px;
 }
 
 .attending {

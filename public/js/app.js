@@ -133,7 +133,7 @@ $(function() {
 // Hide submit button and show add another button
 
 	$("#submit").click(function() {
-		$("#submit").hide();
+		$("#rsvp-one").hide();
 		$("#submitted").show();
 		$("#addanother").show();
 	});
@@ -141,7 +141,7 @@ $(function() {
 	$("#addanother").click(function() {
 		$("#addanother").hide();
 		$("#submitted").hide();
-		$("#submit").show();
+		$("#rsvp-one").show();
 	});
 
 
